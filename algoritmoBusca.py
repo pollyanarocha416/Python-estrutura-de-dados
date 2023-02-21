@@ -18,3 +18,19 @@ else:
 
 
 # pra lista ORDENADA, é mais eficiente fazer uma busca binaria
+
+def retorno(l, elem):
+    for i in range(len(l)):
+        if l[i] == elem:
+            return i
+    return None
+
+
+l_estranha = [5, 2, 5, 1, 7]
+elemento = int(input("Qual valor você quer saber? "))
+
+indices = retorno(l_estranha, elemento)
+if indices is not None:
+    print("O índice do elemento {} é {}".format(elemento, indices))
+else:
+    print("O elemento {} não se encontra na lista".format(elemento))
